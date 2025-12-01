@@ -10,6 +10,9 @@ export default function Hero() {
           <h1 className="text-5xl md:text-9xl font-black tracking-tighter text-integra-olive uppercase drop-shadow-lg leading-none">
             INTEGRA
           </h1>
+          <h2 className="text-xl md:text-2xl text-gray-400 font-mono mt-2 mb-4 tracking-wider">
+            Arquitectura e Ingeniería de Datos
+          </h2>
           <div className="h-1 w-16 md:w-24 bg-integra-olive my-4 md:my-6 mx-auto md:mx-0 rounded-full" />
           <p className="text-xl md:text-4xl font-light text-white tracking-wide font-sans px-4 md:px-0">
             La base para decisiones inteligentes

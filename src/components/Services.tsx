@@ -7,9 +7,9 @@ export default function Services() {
 
   const services = {
     architecture: {
-      title: "Data Architecture",
-      shortDesc: "Designing complex data ecosystems that handle high velocity and volume with ease. We ensure your data flows efficiently from source to insight.",
-      fullDesc: "Our Data Architecture philosophy is built on modularity and scalability. We design systems that can evolve with your business, ensuring that your data infrastructure is not just a storage solution, but a strategic asset. From data lakes to mesh architectures, we blueprint the future of your information.",
+      title: "Arquitectura de Datos",
+      shortDesc: "Diseñamos la base de estrategias sustentadas en datos. Infraestructura alineada a tu modelo de negocio para decisiones estratégicas.",
+      fullDesc: "Nuestro enfoque se centra en entender tu cadena de valor. No solo almacenamos datos; diseñamos una infraestructura robusta y confiable que se adapta a tu modelo de negocio, permitiendo que la información se convierta en tu activo más estratégico. Desde data lakes hasta arquitecturas mesh, creamos el plano para el futuro de tu información.",
       icon: (
         <svg className="w-24 h-24 text-integra-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
       ),
@@ -29,9 +29,9 @@ export default function Services() {
       )
     },
     engineering: {
-      title: "Data Engineering",
-      shortDesc: "Building the pipelines and storage solutions that power your analytics. We focus on reliability, data quality, and performance optimization.",
-      fullDesc: "We engineer robust data pipelines that are fault-tolerant and self-healing. Using modern tools and practices like CI/CD for data, we ensure that your data is accurate, timely, and accessible. We handle the heavy lifting of ETL/ELT so you can focus on insights.",
+      title: "Ingeniería de Datos",
+      shortDesc: "Implementamos soluciones de confiabilidad absoluta. Construimos pipelines robustos que garantizan la integridad de tus datos.",
+      fullDesc: "Construimos pipelines robustos y tolerantes a fallos que garantizan la integridad de tus datos, asegurando que la información crítica esté siempre disponible para la toma de decisiones. Nos enfocamos en la confiabilidad y robustez de la solución, manejando la complejidad técnica para que tú puedas enfocarte en los insights.",
       icon: (
          <svg className="w-24 h-24 text-integra-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
       ),
@@ -69,10 +69,10 @@ export default function Services() {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="mb-20 text-center md:text-left">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            Engineering <span className="text-integra-olive">Excellence</span>
+            Excelencia en <span className="text-integra-olive">Ingeniería</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl font-light">
-                Conocemos las tecnologías que están cambiando el juego: encontraremos la ideal para tu negocio.
+                Entendemos las tecnologías que están cambiando el juego: encontraremos la ideal para tu negocio.
             </p>
         </div>
         
@@ -142,7 +142,7 @@ export default function Services() {
                   onClick={() => setSelectedService(null)}
                   className="w-full md:w-auto px-6 py-3 bg-integra-olive text-white rounded-lg font-semibold hover:bg-integra-olive-light transition-colors"
                 >
-                  Close
+                  Cerrar
                 </button>
               </div>
             </div>

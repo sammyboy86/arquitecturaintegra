@@ -1,16 +1,24 @@
+import Image from 'next/image';
+
 export default function Founders() {
   const founders = [
     {
-      role: "Chief Executive Officer",
-      description: "Visionary leader with 15+ years in data strategy.",
+      name: "Camilo",
+      role: "Director General (CEO)",
+      description: "Penelargo",
+      image: "/assets/camilo.jpg"
     },
     {
-      role: "Chief Technology Officer",
-      description: "Architect of scalable, bulletproof data systems.",
+      name: "Sammy",
+      role: "Científico de datos",
+      description: "Desarrollador de tecnología en Prima manufactura, creador de aprendeapp.com",
+      image: "/assets/sammy.jpg"
     },
     {
-      role: "Chief Operations Officer",
-      description: "Ensuring operational excellence and client success.",
+      name: "Manu",
+      role: "Director de Operaciones (COO)",
+      description: "Asegurando la excelencia operativa y el éxito del cliente.",
+      image: "/assets/manu.png"
     },
   ];
 
@@ -34,7 +42,7 @@ export default function Founders() {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20">
             <h2 className="text-3xl md:text-5xl font-bold max-w-xl mb-6 md:mb-0">
-            Meet the <span className="text-integra-olive">Minds</span> Behind the Infrastructure
+            Conoce a las <span className="text-integra-olive">Mentes</span> Detrás de la Infraestructura
             </h2>
             <div className="h-1 w-24 md:w-32 bg-white/10 hidden md:block mb-4"></div>
         </div>
@@ -43,16 +51,26 @@ export default function Founders() {
           {founders.map((founder, index) => (
             <div key={index} className="group relative">
               <div className="aspect-[4/5] w-full bg-[#202020] rounded-xl overflow-hidden mb-6 relative">
-                 {/* Placeholder for Founder Image */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 z-10"></div>
-                 <div className="absolute bottom-0 left-0 p-6 z-20">
-                    <span className="text-8xl font-black text-white/5 group-hover:text-integra-olive/20 transition-colors duration-500 absolute -top-12 -right-4">0{index + 1}</span>
-                 </div>
-                 <div className="absolute inset-0 bg-integra-olive/0 group-hover:bg-integra-olive/10 transition-colors duration-500"></div>
+                 {founder.image ? (
+                   <Image 
+                     src={founder.image} 
+                     alt={founder.name} 
+                     fill 
+                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                   />
+                 ) : (
+                   <>
+                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 z-10"></div>
+                     <div className="absolute bottom-0 left-0 p-6 z-20">
+                        <span className="text-8xl font-black text-white/5 group-hover:text-integra-olive/20 transition-colors duration-500 absolute -top-12 -right-4">0{index + 1}</span>
+                     </div>
+                   </>
+                 )}
+                 <div className="absolute inset-0 bg-integra-olive/0 group-hover:bg-integra-olive/10 transition-colors duration-500 pointer-events-none"></div>
               </div>
               
               <div className="pr-4">
-                <h3 className="text-2xl font-bold mb-1 group-hover:text-integra-olive transition-colors">Founder Name</h3>
+                <h3 className="text-2xl font-bold mb-1 group-hover:text-integra-olive transition-colors">{founder.name}</h3>
                 <p className="text-sm font-mono text-gray-400 mb-3 uppercase tracking-wider">{founder.role}</p>
                 <p className="text-gray-500 leading-relaxed text-sm">{founder.description}</p>
               </div>
