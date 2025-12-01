@@ -1,11 +1,11 @@
 export default function Quote() {
   return (
-    <section className="w-full relative z-20 -mt-24 md:-mt-40 pointer-events-none">
+    <section className="w-full relative z-20 mt-12 md:-mt-40 pointer-events-none">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center pointer-events-auto">
             
             {/* Glass Container with smooth gradient border */}
-            <div className="relative p-10 md:p-20 bg-gradient-to-b from-white/5 to-black/40 backdrop-blur-2xl rounded-[3rem] shadow-2xl overflow-hidden border border-white/5 group hover:border-white/10 transition-colors duration-700">
+            <div className="relative p-6 md:p-20 bg-gradient-to-b from-white/5 to-black/40 backdrop-blur-2xl rounded-[3rem] shadow-2xl overflow-hidden border border-white/5 group hover:border-white/10 transition-colors duration-700">
                 
                 {/* Ambient Glow */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-integra-olive/5 to-transparent opacity-50 pointer-events-none"></div>

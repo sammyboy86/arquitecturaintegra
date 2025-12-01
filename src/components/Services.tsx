@@ -82,7 +82,7 @@ export default function Services() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
             {/* Data Architecture Card */}
-            <div className="group relative bg-white/5 backdrop-blur-sm p-10 rounded-2xl border border-white/10 hover:border-integra-olive/50 transition-all duration-500 hover:bg-white/10 hover:-translate-y-1">
+            <div className="group relative bg-white/5 backdrop-blur-sm p-6 md:p-10 rounded-2xl border border-white/10 hover:border-integra-olive/50 transition-all duration-500 hover:bg-white/10 hover:-translate-y-1">
                 <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
                     {services.architecture.icon}
                 </div>
@@ -100,7 +100,7 @@ export default function Services() {
             </div>
 
             {/* Data Engineering Card */}
-            <div className="group relative bg-white/5 backdrop-blur-sm p-10 rounded-2xl border border-white/10 hover:border-integra-olive/50 transition-all duration-500 hover:bg-white/10 hover:-translate-y-1">
+            <div className="group relative bg-white/5 backdrop-blur-sm p-6 md:p-10 rounded-2xl border border-white/10 hover:border-integra-olive/50 transition-all duration-500 hover:bg-white/10 hover:-translate-y-1">
                 <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
                      {services.engineering.icon}
                 </div>
