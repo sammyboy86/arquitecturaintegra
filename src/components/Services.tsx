@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import TechLogos from './TechLogos';
 
 export default function Services() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -53,18 +54,20 @@ export default function Services() {
   };
 
   return (
-    <section className="w-full bg-integra-surface py-32 text-white relative overflow-hidden">
+    <section className="w-full py-32 text-white relative overflow-hidden">
       {/* Circuit Background Pattern */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
-        <pattern id="circuit-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-          <path d="M10 10h80v80h-80z" fill="none" />
-          <path d="M20 20h60v60h-60z" stroke="currentColor" strokeWidth="0.5" fill="none" />
-          <circle cx="20" cy="20" r="2" fill="currentColor" />
-          <circle cx="80" cy="80" r="2" fill="currentColor" />
-          <path d="M50 10v20M10 50h20M90 50h-20M50 90v-20" stroke="currentColor" strokeWidth="0.5" />
-        </pattern>
-        <rect width="100%" height="100%" fill="url(#circuit-pattern)" />
-      </svg>
+      <div className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.03]" style={{ maskImage: 'linear-gradient(to bottom, transparent, black 20%)' }}>
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <pattern id="circuit-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+            <path d="M10 10h80v80h-80z" fill="none" />
+            <path d="M20 20h60v60h-60z" stroke="currentColor" strokeWidth="0.5" fill="none" />
+            <circle cx="20" cy="20" r="2" fill="currentColor" />
+            <circle cx="80" cy="80" r="2" fill="currentColor" />
+            <path d="M50 10v20M10 50h20M90 50h-20M50 90v-20" stroke="currentColor" strokeWidth="0.5" />
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#circuit-pattern)" />
+        </svg>
+      </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="mb-20 text-center md:text-left">
@@ -74,9 +77,10 @@ export default function Services() {
             <p className="text-xl text-gray-400 max-w-2xl font-light">
                 Entendemos las tecnologías que están cambiando el juego: encontraremos la ideal para tu negocio.
             </p>
+            <TechLogos />
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
             {/* Data Architecture Card */}
             <div className="group relative bg-white/5 backdrop-blur-sm p-10 rounded-2xl border border-white/10 hover:border-integra-olive/50 transition-all duration-500 hover:bg-white/10 hover:-translate-y-1">
                 <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">

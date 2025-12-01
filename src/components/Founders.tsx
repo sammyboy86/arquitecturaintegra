@@ -4,9 +4,9 @@ export default function Founders() {
   const founders = [
     {
       name: "Camilo",
-      role: "Director General (CEO)",
-      description: "Penelargo",
-      image: "/assets/camilo.jpg"
+      role: "Ingeniero en negocios",
+      description: " Experiencia en datos masivos en TV Azteca y proyectos analíticos para la ANTAD",
+      image: "/assets/camilo.png"
     },
     {
       name: "Sammy",

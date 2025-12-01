@@ -2,7 +2,7 @@ import HeroDiagram from './HeroDiagram';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-integra-dark to-[#0f0f0f]">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
       
       <div className="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center gap-12 z-10">
         {/* Text Content */}
