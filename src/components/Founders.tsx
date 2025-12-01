@@ -1,4 +1,58 @@
 import Image from 'next/image';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+
+interface Founder {
+  name: string;
+  role: string;
+  description: string;
+  image: string;
+}
+
+function FounderCard({ founder, index }: { founder: Founder; index: number }) {
+  const { ref, isVisible } = useIntersectionObserver({
+    threshold: 0.2,
+    freezeOnceVisible: true,
+  });
+
+  return (
+    <div 
+      ref={ref as React.RefObject<HTMLDivElement>}
+      className={`group relative transition-all duration-700 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+      style={{ transitionDelay: `${index * 150}ms` }}
+    >
+      <div className="aspect-[4/5] w-full bg-[#202020] rounded-xl overflow-hidden mb-6 relative">
+         {founder.image ? (
+           <Image 
+             src={founder.image} 
+             alt={founder.name} 
+             fill 
+             className={`object-cover transition-all duration-700 ${
+               isVisible ? 'grayscale-0' : 'grayscale'
+             } group-hover:grayscale-0`}
+           />
+         ) : (
+           <>
+             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 z-10"></div>
+             <div className="absolute bottom-0 left-0 p-6 z-20">
+                <span className="text-8xl font-black text-white/5 group-hover:text-integra-olive/20 transition-colors duration-500 absolute -top-12 -right-4">0{index + 1}</span>
+             </div>
+           </>
+         )}
+         <div className={`absolute inset-0 transition-colors duration-500 pointer-events-none ${
+            isVisible ? 'bg-integra-olive/0' : 'bg-integra-olive/0'
+         } group-hover:bg-integra-olive/10`}></div>
+      </div>
+      
+      <div className="pr-4">
+        <h3 className="text-2xl font-bold mb-1 group-hover:text-integra-olive transition-colors">{founder.name}</h3>
+        <p className="text-sm font-mono text-gray-400 mb-3 uppercase tracking-wider">{founder.role}</p>
+        <p className="text-gray-500 leading-relaxed text-sm">{founder.description}</p>
+      </div>
+    </div>
+  );
+}
 
 export default function Founders() {
   const founders = [
@@ -49,32 +103,7 @@ export default function Founders() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {founders.map((founder, index) => (
-            <div key={index} className="group relative">
-              <div className="aspect-[4/5] w-full bg-[#202020] rounded-xl overflow-hidden mb-6 relative">
-                 {founder.image ? (
-                   <Image 
-                     src={founder.image} 
-                     alt={founder.name} 
-                     fill 
-                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                   />
-                 ) : (
-                   <>
-                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 z-10"></div>
-                     <div className="absolute bottom-0 left-0 p-6 z-20">
-                        <span className="text-8xl font-black text-white/5 group-hover:text-integra-olive/20 transition-colors duration-500 absolute -top-12 -right-4">0{index + 1}</span>
-                     </div>
-                   </>
-                 )}
-                 <div className="absolute inset-0 bg-integra-olive/0 group-hover:bg-integra-olive/10 transition-colors duration-500 pointer-events-none"></div>
-              </div>
-              
-              <div className="pr-4">
-                <h3 className="text-2xl font-bold mb-1 group-hover:text-integra-olive transition-colors">{founder.name}</h3>
-                <p className="text-sm font-mono text-gray-400 mb-3 uppercase tracking-wider">{founder.role}</p>
-                <p className="text-gray-500 leading-relaxed text-sm">{founder.description}</p>
-              </div>
-            </div>
+            <FounderCard key={index} founder={founder} index={index} />
           ))}
         </div>
       </div>

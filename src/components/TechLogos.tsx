@@ -1,12 +1,23 @@
 import Image from 'next/image';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 export default function TechLogos() {
+  const { ref, isVisible } = useIntersectionObserver({
+    threshold: 0.2,
+    freezeOnceVisible: true,
+  });
+
   return (
     <div className="mt-12 pt-8 border-t border-white/10 w-full">
       <p className="text-sm text-gray-500 font-mono uppercase tracking-widest mb-10 text-center">
         Tecnologías que dominamos
       </p>
-      <div className="flex flex-wrap gap-10 md:gap-16 items-center justify-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+      <div 
+        ref={ref as React.RefObject<HTMLDivElement>}
+        className={`flex flex-wrap gap-10 md:gap-16 items-center justify-center transition-all duration-1000 ${
+          isVisible ? 'opacity-100 grayscale-0' : 'opacity-60 grayscale'
+        } hover:grayscale-0`}
+      >
         
         {/* AWS */}
         <div className="group flex flex-col items-center gap-3 hover:opacity-100 transition-opacity">
