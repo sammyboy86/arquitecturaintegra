@@ -72,8 +72,8 @@ export default function Founders() {
     },
     {
       name: "Manu",
-      role: "Director de Operaciones (COO)",
-      description: "Asegurando la excelencia operativa y el éxito del cliente.",
+      role: "Ingeniero en negocios",
+      description: "Experiencia en el sector de seguros, medios masivos, especialista en rediseño de procesos",
       image: "/assets/manu.png"
     },
   ];
